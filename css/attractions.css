@@ -21,7 +21,7 @@ img {
 }
 
 .btn {
-  background: #23bed6;
+  background: #e03d44;
   color: #fff;
   padding: 9px 26px;
   border-radius: 20px;
@@ -29,7 +29,7 @@ img {
 
 .btn:hover {
   background: #fff;
-  color: #23bed6;
+  color: #e03d44;
 }
 
 nav a {
@@ -66,7 +66,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
 
 @media (min-width: 991px) {
   nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
-    text-shadow: 1px 1px #aaa;
+    text-shadow: 1px 1px #8b8b8b;
   }
 }
 
@@ -85,11 +85,11 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #intro .jumbotron {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/unsplash01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/unsplash01.jpg);
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 60vh;
   margin-bottom: 0;
 }
 
@@ -98,6 +98,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #intro .jumbotron h1 {
+  color: #fff;
   font-size: 52px;
   font-weight: 400;
   line-height: 1.5;
@@ -119,32 +120,32 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 @media (max-width: 576px) {
   #intro .jumbotron h1 {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 375px) {
   #intro .jumbotron h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 
-#intro .jumbotron h1 .br {
-  display: none;
+#intro .jumbotron select {
+  cursor: pointer;
 }
 
-@media (max-width: 475px) {
-  #intro .jumbotron h1 .br {
-    display: block;
-  }
+#intro .jumbotron .send {
+  cursor: pointer;
+  opacity: 0.8;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-#intro .jumbotron h1::after {
-  display: block;
-  background-color: #23bed6;
-  content: "";
-  height: 3px;
-  width: 50px;
-  margin-top: 10px;
+#intro .jumbotron .send:hover {
+  opacity: 1;
 }
-/*# sourceMappingURL=style.css.map */
+
+#intro .jumbotron .send img {
+  width: 40px;
+}
+/*# sourceMappingURL=attractions.css.map */

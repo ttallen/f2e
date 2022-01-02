@@ -1,0 +1,164 @@
+$color_white: #fff;
+$color_green: #23bed6;
+
+@mixin pc {
+    @media(min-width: 991px) {
+        @content
+    }
+}
+
+@mixin tablet991 {
+    @media(max-width: 991px) {
+        @content
+    }
+}
+
+@mixin tablet768 {
+    @media(max-width: 768px) {
+        @content
+    }
+}
+
+@mixin tablet640 {
+    @media(max-width: 640px) {
+        @content
+    }
+}
+
+@mixin mobile576 {
+    @media(max-width: 576px) {
+        @content
+    }
+}
+
+@mixin mobile475 {
+    @media(max-width: 475px) {
+        @content
+    }
+}
+
+@mixin mobile375 {
+    @media(max-width: 375px) {
+        @content
+    }
+}
+
+html,body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+h3 {
+    font-size: 32px;
+    line-height: 1.5;
+}
+p {
+    color: #707070;
+    font-size: 16px;
+}
+p.lead {
+    color: #eee;
+}
+img {
+    max-width: 100%;
+}
+.btn {
+    background: $color_green;
+    color: $color_white;
+    padding: 9px 26px;
+    border-radius: 20px;
+    &:hover {
+        background: $color_white;
+        color: $color_green;
+    }
+}
+nav {
+    a {
+        margin: 0 10px
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+}
+nav.navbar.navbar-expand-lg.navbar-dark {
+    background: #000;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    transition: 0.5s;
+}
+nav.navbar.navbar-expand-lg.navbar-dark.nav_top {
+    @include pc {
+        background-color: transparent;
+        border-bottom: 1px solid $color_white;
+    }
+    .nav-link {
+        color: $color_white;
+        @include pc {
+            text-shadow: 1px 1px #aaa;
+        }
+        &:hover {
+            color: #bbb;
+        }
+    }
+    .nav-link.active {
+        color: $color_green;
+    }
+}
+nav.navbar.navbar-expand-lg.navbar-dark {
+    .nav-link {
+        @include tablet991 {
+            margin: 15px 0;
+        }
+    }
+}
+
+#intro {
+    .jumbotron {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15)),url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        margin-bottom: 0;
+        .text-box {
+            color: $color_white;
+        }
+        h1 {
+            font-size: 52px;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: 6px;
+            margin: 15px 0;
+            @include tablet768 {
+                font-size: 48px;
+            }
+            @include tablet640 {
+                font-size: 43px;
+            }
+            @include mobile576 {
+                font-size: 38px;
+            }
+            @include mobile375 {
+                font-size: 32px;
+            }
+            .br {
+                display: none;
+                @include mobile475 {
+                    display: block;
+                }
+            }
+            &::after {
+                display: block;
+                background-color: $color_green;
+                content: "";
+                height: 3px;
+                width: 50px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
