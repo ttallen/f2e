@@ -61,13 +61,14 @@ img {
     max-width: 100%;
 }
 .btn {
-    background: #e03d44;
+    background: $color_green;
     color: $color_white;
     padding: 9px 26px;
+    border: 1px solid $color_green;
     border-radius: 20px;
     &:hover {
         background: $color_white;
-        color: #e03d44;
+        color: $color_green;
     }
 }
 nav {

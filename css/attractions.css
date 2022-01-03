@@ -21,15 +21,16 @@ img {
 }
 
 .btn {
-  background: #e03d44;
+  background: #23bed6;
   color: #fff;
   padding: 9px 26px;
+  border: 1px solid #23bed6;
   border-radius: 20px;
 }
 
 .btn:hover {
   background: #fff;
-  color: #e03d44;
+  color: #23bed6;
 }
 
 nav a {
