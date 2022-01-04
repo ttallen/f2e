@@ -20,19 +20,6 @@ img {
   max-width: 100%;
 }
 
-.btn {
-  background: #23bed6;
-  color: #fff;
-  padding: 9px 26px;
-  border: 1px solid #23bed6;
-  border-radius: 20px;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #23bed6;
-}
-
 nav a {
   margin: 0 10px;
 }
@@ -91,7 +78,14 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   background-size: cover;
   background-position: center;
   height: 60vh;
+  border-radius: 0;
   margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+  #intro .jumbotron {
+    height: 100vh;
+  }
 }
 
 #intro .jumbotron .text-box {
@@ -102,6 +96,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   color: #fff;
   font-size: 52px;
   font-weight: 400;
+  text-align: center;
   line-height: 1.5;
   letter-spacing: 6px;
   margin: 15px 0;
@@ -131,8 +126,14 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   }
 }
 
-#intro .jumbotron select {
+#intro .jumbotron .categorySelect, #intro .jumbotron .citySelect {
   cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  #intro .jumbotron .categorySelect, #intro .jumbotron .citySelect {
+    width: 38%;
+  }
 }
 
 #intro .jumbotron .send {
@@ -148,5 +149,38 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 #intro .jumbotron .send img {
   width: 40px;
+}
+
+#card_group .search {
+  font-size: 32px;
+}
+
+@media (max-width: 576px) {
+  #card_group .search {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  #card_group .search {
+    font-size: 26px;
+  }
+}
+
+#card_group .btn {
+  background: #23bed6;
+  color: #fff;
+  padding: 9px 26px;
+  border: 1px solid #23bed6;
+  border-radius: 5px;
+}
+
+#card_group .btn:hover {
+  background: #fff;
+  color: #23bed6;
+}
+
+.footer {
+  background: #23bed6;
 }
 /*# sourceMappingURL=attractions.css.map */

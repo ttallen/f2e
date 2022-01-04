@@ -60,17 +60,6 @@ p.lead {
 img {
     max-width: 100%;
 }
-.btn {
-    background: $color_green;
-    color: $color_white;
-    padding: 9px 26px;
-    border: 1px solid $color_green;
-    border-radius: 20px;
-    &:hover {
-        background: $color_white;
-        color: $color_green;
-    }
-}
 nav {
     a {
         margin: 0 10px
@@ -124,7 +113,11 @@ nav.navbar.navbar-expand-lg.navbar-dark {
         background-size: cover;
         background-position: center;
         height: 60vh;
+        border-radius: 0;
         margin-bottom: 0;
+        @include mobile576 {
+            height: 100vh;
+        }
         .text-box {
             color: $color_white;
         }
@@ -132,6 +125,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
             color: $color_white;
             font-size: 52px;
             font-weight: 400;
+            text-align: center;
             line-height: 1.5;
             letter-spacing: 6px;
             margin: 15px 0;
@@ -148,8 +142,11 @@ nav.navbar.navbar-expand-lg.navbar-dark {
                 font-size: 30px;
             }
         }
-        select {
+        .categorySelect,.citySelect {
             cursor: pointer;
+            @include tablet640 {
+                width: 38%;
+            }
         }
         .send {
             cursor: pointer;
@@ -163,4 +160,31 @@ nav.navbar.navbar-expand-lg.navbar-dark {
             }
         }
     }
+}
+
+#card_group {
+    .search {
+        font-size: 32px;
+        @include mobile576 {
+            font-size: 28px;
+        }
+        @include mobile375 {
+            font-size: 26px;
+        }
+    }
+    .btn {
+        background: $color_green;
+        color: $color_white;
+        padding: 9px 26px;
+        border: 1px solid $color_green;
+        border-radius: 5px;
+        &:hover {
+            background: $color_white;
+            color: $color_green;
+        }
+    }
+}
+
+.footer {
+    background: $color_green;
 }
