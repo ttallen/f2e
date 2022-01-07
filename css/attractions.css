@@ -84,7 +84,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 @media (max-width: 576px) {
   #intro .jumbotron {
-    height: 100vh;
+    height: 70vh;
   }
 }
 

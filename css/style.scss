@@ -162,3 +162,50 @@ nav.navbar.navbar-expand-lg.navbar-dark {
         }
     }
 }
+
+#second {
+    padding: 100px 0;
+    h3 {
+        text-align: center;
+    }
+    .line {
+        height: 3px;
+        width: 50px;
+        background-color: #e03d44;
+        margin-bottom: 70px;
+    }
+}
+
+#photo {
+    min-height: 460px;
+    h3 {
+        color: #fff;
+    }
+    span {
+        color: #fff;
+        font-size: 22px;
+    }
+    .line {
+        width: 20px;
+        height: 2px;
+        background-color: #e03d44;
+        margin-top: 3px;
+    }
+    .boxImage {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(https://images.unsplash.com/photo-1606733540477-40342227cf44);
+    }
+    .boxImage2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(https://images.unsplash.com/photo-1526682847805-721837c3f83b);
+    }
+    .boxImage3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(https://images.unsplash.com/photo-1626939162296-0350d7c1dfdd);
+    }
+    .boxBg {
+        min-height: 450px;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    .bgBlack {
+        background-color: #333;
+    }
+}

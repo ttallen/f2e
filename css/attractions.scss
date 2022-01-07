@@ -116,7 +116,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
         border-radius: 0;
         margin-bottom: 0;
         @include mobile576 {
-            height: 100vh;
+            height: 70vh;
         }
         .text-box {
             color: $color_white;
