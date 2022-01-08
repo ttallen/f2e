@@ -159,12 +159,18 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #second .line {
   height: 3px;
   width: 50px;
-  background-color: #e03d44;
+  background-color: #23bed6;
   margin-bottom: 70px;
 }
 
+@media (max-width: 576px) {
+  #second .line {
+    margin-bottom: 50px;
+  }
+}
+
 #photo {
-  min-height: 460px;
+  min-height: 450px;
 }
 
 #photo h3 {
@@ -179,7 +185,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #photo .line {
   width: 20px;
   height: 2px;
-  background-color: #e03d44;
+  background-color: #23bed6;
   margin-top: 3px;
 }
 
@@ -206,5 +212,95 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 #photo .bgBlack {
   background-color: #333;
+}
+
+#hotArea {
+  padding: 100px 0;
+}
+
+@media (max-width: 576px) {
+  #hotArea {
+    padding: 50px 10%;
+  }
+}
+
+#hotArea .container {
+  max-width: 1000px;
+}
+
+#hotArea .container h3 {
+  text-align: center;
+}
+
+#hotArea .container .line {
+  height: 3px;
+  width: 50px;
+  background-color: #23bed6;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 576px) {
+  #hotArea .container .line {
+    margin-bottom: 50px;
+  }
+}
+
+#hotArea .container .swiper {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px 30px 10px;
+}
+
+#hotArea .container .swiper .swiper-slide {
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hotArea .container .swiper .swiper-slide .card-img-top {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#hotArea .container .swiper .swiper-slide .btn {
+  background: #23bed6;
+  color: #fff;
+  padding: 9px 26px;
+  border: 1px solid #23bed6;
+  border-radius: 5px;
+}
+
+#hotArea .container .swiper .swiper-slide .btn:hover {
+  background: #fff;
+  color: #23bed6;
+}
+
+#hotArea .container .swiper .swiper-pagination {
+  bottom: -5px;
+}
+
+#hotArea .container .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 10px !important;
+}
+
+#hotArea .container .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #333 !important;
+}
+
+.footer {
+  background: #23bed6;
 }
 /*# sourceMappingURL=style.css.map */

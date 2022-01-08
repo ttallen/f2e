@@ -171,13 +171,16 @@ nav.navbar.navbar-expand-lg.navbar-dark {
     .line {
         height: 3px;
         width: 50px;
-        background-color: #e03d44;
+        background-color: $color_green;
         margin-bottom: 70px;
+        @include mobile576 {
+            margin-bottom: 50px;
+        }
     }
 }
 
 #photo {
-    min-height: 460px;
+    min-height: 450px;
     h3 {
         color: #fff;
     }
@@ -188,7 +191,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
     .line {
         width: 20px;
         height: 2px;
-        background-color: #e03d44;
+        background-color: $color_green;
         margin-top: 3px;
     }
     .boxImage {
@@ -208,4 +211,71 @@ nav.navbar.navbar-expand-lg.navbar-dark {
     .bgBlack {
         background-color: #333;
     }
+}
+
+#hotArea {
+    padding: 100px 0;
+    @include mobile576 {
+        padding: 50px 10%;
+    }
+    .container {
+        max-width: 1000px;
+        h3 {
+            text-align: center;
+        }
+        .line {
+            height: 3px;
+            width: 50px;
+            background-color: $color_green;
+            margin-bottom: 70px;
+            @include mobile576 {
+                margin-bottom: 50px;
+            }
+        }
+        .swiper {
+            width: 100%;
+            height: 100%;
+            padding: 0 10px 30px 10px;
+            .swiper-slide {
+                font-size: 18px;
+
+                /* Center slide text vertically */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .card-img-top {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .btn {
+                    background: $color_green;
+                    color: $color_white;
+                    padding: 9px 26px;
+                    border: 1px solid $color_green;
+                    border-radius: 5px;
+                    &:hover {
+                        background: $color_white;
+                        color: $color_green;
+                    }
+                }
+            }
+            .swiper-pagination {
+                bottom: -5px;
+                .swiper-pagination-bullet {
+                    width: 10px !important;
+                    height: 10px !important;
+                    margin: 0 10px !important;
+                }
+                .swiper-pagination-bullet-active {
+                    background: #333 !important;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: $color_green;
 }
