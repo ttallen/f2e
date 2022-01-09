@@ -163,6 +163,28 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 }
 
 #card_group {
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        @include tablet991 {
+            height: 250px;
+        }
+        @include tablet768 {
+            height: 190px;
+        }
+        @include tablet640 {
+            height: 180px;
+        }
+        @include mobile576 {
+            height: 300px;
+        }
+        @include mobile475 {
+            height: 250px;
+        }
+        @include mobile375 {
+            height: 200px;
+        }
+    }
     .search {
         font-size: 32px;
         @include mobile576 {
