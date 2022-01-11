@@ -460,7 +460,7 @@ send.addEventListener("click",function(e) {
                             <h5 class="card-title">${item.ScenicSpotName}</h5>
                             <span class="d-flex align-items-center mb-3">
                                 <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text ml-1">無資料</p>
+                                <p class="card-text ml-1">${item.Address}</p>
                             </span>
                             <span class="d-flex align-items-center mb-3">
                                 <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
@@ -474,8 +474,8 @@ send.addEventListener("click",function(e) {
         });
         if(str == '') {
             str = `
-            <div class="col-12 m-5 text-center">
-               <p>--無符合資料--</p>
+            <div class="col-12 my-5 py-5 text-center">
+               <h5 class="my-5">--無符合資料--</h5>
             </div>`
         }
         list.innerHTML = search + str;

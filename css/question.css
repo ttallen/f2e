@@ -1,0 +1,139 @@
+html, body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+p {
+  color: #707070;
+  font-size: 16px;
+}
+
+.flex-grow {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+nav .navbar-collapse .navbar-nav {
+  text-align: center;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark {
+  background: #000;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 24;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 991px) {
+  nav.navbar.navbar-expand-lg.navbar-dark.nav_top {
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
+  color: #fff;
+}
+
+@media (min-width: 991px) {
+  nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
+    text-shadow: 1px 1px #8b8b8b;
+  }
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link:hover {
+  color: #bbb;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
+  color: #23bed6;
+}
+
+@media (max-width: 991px) {
+  nav.navbar.navbar-expand-lg.navbar-dark .nav-link {
+    margin: 15px 0;
+  }
+}
+
+#header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+}
+
+#content {
+  padding: 50px 0;
+}
+
+#content .title {
+  border-bottom: 2px solid #000;
+}
+
+#content .title h3 {
+  text-align: center;
+}
+
+#content .question-list {
+  margin: 0 auto;
+  width: 600px;
+}
+
+#content .question-list .question h4 {
+  cursor: pointer;
+  margin: 0;
+  padding: 20px 5px;
+  border-bottom: 1px solid #23bed6;
+  background: #fff;
+}
+
+#content .question-list .question h4.active {
+  font-weight: 600;
+}
+
+#content .question-list .question p {
+  display: none;
+  padding: 10px;
+}
+
+#content .question-list .question .active {
+  display: block;
+}
+
+.footer {
+  background: #23bed6;
+}
+/*# sourceMappingURL=question.css.map */
