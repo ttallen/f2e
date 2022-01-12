@@ -262,7 +262,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #card_group .card-page.page-open > div {
   position: relative;
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
   background: #fff;
   padding: 1.5%;
   z-index: 22;

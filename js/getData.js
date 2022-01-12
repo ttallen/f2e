@@ -20,188 +20,17 @@ function getTourList() {
         </div>`
         let str = '';
         thisData.forEach(function(item) {
-            if(item.Picture.PictureUrl1 == undefined || item.Picture.PictureDescription1 == undefined){
-                console.log("沒圖");
-                str += `            
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="images/unsplash02.jpg" class="card-img-top" alt="">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="noImg">
-                                <p class="card-text text-truncate ml-1">${item.Address}</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="images/unsplash02.jpg" class="card-img-top" alt="">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">${item.Address}</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">${item.OpenTime}</p>
-                                </span>
-                                <p class="card-text">${item.Description}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-                return;
-            } else if(item.Address == undefined) {
-                console.log("沒地址");
-                str += `            
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text text-truncate ml-1">無資料</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">無資料</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">${item.OpenTime}</p>
-                                </span>
-                                <p class="card-text">${item.Description}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-                return;
-            } else if(item.OpenTime == undefined) {
-                console.log("沒營業時間");
-                str += `
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text text-truncate ml-1">${item.Address}</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">${item.Address}</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">無資料</p>
-                                </span>
-                                <p class="card-text">${item.Description}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-            } else if(item.Description == undefined) {
-                console.log("沒描述");
-                str += `
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text text-truncate ml-1">${item.Address}</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">無資料</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">${item.OpenTime}</p>
-                                </span>
-                                <p class="card-text">無</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-            }
             str += `
             <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
                 <div class="card shadow">
                     <div class="card-head">
-                        <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
+                        <img src="${item.Picture.PictureUrl1 == undefined ? 'images/no_img.jpg' : item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1 == undefined ? '預設圖片' : item.Picture.PictureDescription1}">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
+                        <h5 class="card-title text-truncate">${item.ScenicSpotName == undefined ? '無標題' : item.ScenicSpotName}</h5>
                         <span class="d-flex align-items-center mb-3">
                             <img class="location mr-1" src="images/location.svg" alt="">
-                            <p class="card-text text-truncate ml-1">${item.Address}</p>
+                            <p class="card-text text-truncate ml-1">${item.Address == undefined ? '無資料' : item.Address}</p>
                         </span>
                         <a href="#" class="btn mt-3 btnOpen">了解更多</a>
                     </div>
@@ -214,19 +43,19 @@ function getTourList() {
                     </div>
                     <div class="card-content">
                         <div class="card-img">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
+                            <img src="${item.Picture.PictureUrl1 == undefined ? 'images/no_img.jpg' : item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1 == undefined ? '預設圖片' : item.Picture.PictureDescription1}">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${item.ScenicSpotName}</h5>
+                            <h5 class="card-title">${item.ScenicSpotName == undefined ? '無資料' : item.ScenicSpotName}</h5>
                             <span class="d-flex align-items-center mb-3">
                                 <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text ml-1">${item.Address}</p>
+                                <p class="card-text ml-1">${item.Address == undefined ? '無資料' : item.Address}</p>
                             </span>
                             <span class="d-flex align-items-center mb-3">
                                 <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                <p class="card-text ml-1">${item.OpenTime}</p>
+                                <p class="card-text ml-1">${item.OpenTime == undefined ? '無資料' : item.OpenTime}</p>
                             </span>
-                            <p class="card-text">${item.Description}</p>
+                            <p class="card-text">${item.Description == undefined ? '無' : item.Description}</p>
                         </div>
                     </div>
                 </div>
@@ -260,188 +89,17 @@ send.addEventListener("click",function(e) {
         </div>`
         let str = '';
         thisData.forEach(function(item) {
-            if(item.Picture.PictureUrl1 == undefined || item.Picture.PictureDescription1 == undefined){
-                console.log("沒圖");
-                str += `            
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="images/unsplash02.jpg" class="card-img-top" alt="">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="noImg">
-                                <p class="card-text text-truncate ml-1">${item.Address}</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="images/unsplash02.jpg" class="card-img-top" alt="">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">${item.Address}</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">${item.OpenTime}</p>
-                                </span>
-                                <p class="card-text">${item.Description}</p>
-                            </div>
-                        </div>
-                    </div>    
-                </div>`
-                return;
-            } else if(item.Address == undefined) {
-                console.log("沒地址");
-                str += `            
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text text-truncate ml-1">無資料</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">無資料</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">${item.OpenTime}</p>
-                                </span>
-                                <p class="card-text">${item.Description}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-                return;
-            } else if(item.OpenTime == undefined) {
-                console.log("沒營業時間");
-                str += `
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text text-truncate ml-1">${item.Address}</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">${item.Address}</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">無資料</p>
-                                </span>
-                                <p class="card-text">${item.Description}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-            } else if(item.Description == undefined) {
-                console.log("沒描述");
-                str += `
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
-                    <div class="card shadow">
-                        <div class="card-head">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
-                            <span class="d-flex align-items-center mb-3">
-                                <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text text-truncate ml-1">${item.Address}</p>
-                            </span>
-                            <a href="#" class="btn mt-3 btnOpen">了解更多</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-page">
-                    <div>
-                        <div class="close-card">
-                            <img src="images/close.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-img">
-                                <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${item.ScenicSpotName}</h5>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="location mr-1" src="images/location.svg" alt="">
-                                    <p class="card-text ml-1">無資料</p>
-                                </span>
-                                <span class="d-flex align-items-center mb-3">
-                                    <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                    <p class="card-text ml-1">${item.OpenTime}</p>
-                                </span>
-                                <p class="card-text">無</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-            }
             str += `
             <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
                 <div class="card shadow">
                     <div class="card-head">
-                        <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
+                        <img src="${item.Picture.PictureUrl1 == undefined ? 'images/no_img.jpg' : item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1 == undefined ? '預設圖片' : item.Picture.PictureDescription1}">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-truncate">${item.ScenicSpotName}</h5>
+                        <h5 class="card-title text-truncate">${item.ScenicSpotName == undefined ? '無標題' : item.ScenicSpotName}</h5>
                         <span class="d-flex align-items-center mb-3">
                             <img class="location mr-1" src="images/location.svg" alt="">
-                            <p class="card-text text-truncate ml-1">${item.Address}</p>
+                            <p class="card-text text-truncate ml-1">${item.Address == undefined ? '無資料' : item.Address}</p>
                         </span>
                         <a href="#" class="btn mt-3 btnOpen">了解更多</a>
                     </div>
@@ -454,19 +112,19 @@ send.addEventListener("click",function(e) {
                     </div>
                     <div class="card-content">
                         <div class="card-img">
-                            <img src="${item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1}">
+                            <img src="${item.Picture.PictureUrl1 == undefined ? 'images/no_img.jpg' : item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1 == undefined ? '預設圖片' : item.Picture.PictureDescription1}">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${item.ScenicSpotName}</h5>
+                            <h5 class="card-title">${item.ScenicSpotName == undefined ? '無資料' : item.ScenicSpotName}</h5>
                             <span class="d-flex align-items-center mb-3">
                                 <img class="location mr-1" src="images/location.svg" alt="">
-                                <p class="card-text ml-1">${item.Address}</p>
+                                <p class="card-text ml-1">${item.Address == undefined ? '無資料' : item.Address}</p>
                             </span>
                             <span class="d-flex align-items-center mb-3">
                                 <img class="clock_icon mr-1" src="images/clock_icon.svg" alt="">
-                                <p class="card-text ml-1">${item.OpenTime}</p>
+                                <p class="card-text ml-1">${item.OpenTime == undefined ? '無資料' : item.OpenTime}</p>
                             </span>
-                            <p class="card-text">${item.Description}</p>
+                            <p class="card-text">${item.Description == undefined ? '無' : item.Description}</p>
                         </div>
                     </div>
                 </div>

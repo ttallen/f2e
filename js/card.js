@@ -16,7 +16,6 @@ $(document).ready(function(){
         $(".bg-black").removeClass("active");
     });
     $("body").on('click','.bg-black',function(){
-        console.log("12");
         $(".card-page").removeClass("page-open");
         $(".bg-black").removeClass("active");
     });

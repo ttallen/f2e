@@ -20,6 +20,21 @@ img {
   max-width: 100%;
 }
 
+.bg-black {
+  display: none;
+}
+
+.bg-black.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.87);
+  z-index: 21;
+}
+
 .btn {
   background: #23bed6;
   color: #fff;
@@ -265,15 +280,57 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
           align-items: center;
 }
 
-#hotArea .container .swiper .swiper-slide .card-img-top {
-  display: block;
+#hotArea .container .swiper .swiper-slide .card .card-head {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  overflow: hidden;
 }
 
-#hotArea .container .swiper .swiper-slide .btn {
+#hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (max-width: 991px) {
+  #hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+    height: 190px;
+  }
+}
+
+@media (max-width: 640px) {
+  #hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  #hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+    height: 260px;
+  }
+}
+
+@media (max-width: 475px) {
+  #hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+    height: 250px;
+  }
+}
+
+@media (max-width: 375px) {
+  #hotArea .container .swiper .swiper-slide .card .card-head .card-img-top {
+    height: 200px;
+  }
+}
+
+#hotArea .container .swiper .swiper-slide .card .btn {
   background: #23bed6;
   color: #fff;
   padding: 9px 26px;
@@ -281,7 +338,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   border-radius: 5px;
 }
 
-#hotArea .container .swiper .swiper-slide .btn:hover {
+#hotArea .container .swiper .swiper-slide .card .btn:hover {
   background: #fff;
   color: #23bed6;
 }
@@ -298,6 +355,94 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 #hotArea .container .swiper .swiper-pagination .swiper-pagination-bullet-active {
   background: #333 !important;
+}
+
+#hotArea .open-group .card-page {
+  display: none;
+}
+
+#hotArea .open-group .card-page .card {
+  border: none;
+}
+
+#hotArea .open-group .card-page.page-open {
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+#hotArea .open-group .card-page.page-open > div {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  background: #fff;
+  padding: 1.5%;
+  z-index: 25;
+}
+
+@media (max-width: 991px) {
+  #hotArea .open-group .card-page.page-open > div {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hotArea .open-group .card-page.page-open > div {
+    width: 60%;
+  }
+}
+
+@media (max-width: 640px) {
+  #hotArea .open-group .card-page.page-open > div {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  #hotArea .open-group .card-page.page-open > div {
+    width: 90%;
+  }
+}
+
+#hotArea .open-group .card-page.page-open .close-card {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5%;
+  right: 1.5%;
+  width: 20px;
+  height: 20px;
+  opacity: 0.4;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#hotArea .open-group .card-page.page-open .close-card:hover {
+  opacity: 1;
+}
+
+#hotArea .open-group .card-page.page-open .close-card img {
+  width: 100%;
+}
+
+#hotArea .open-group .card-page.page-open .card-content .card-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  overflow: hidden;
+}
+
+#hotArea .open-group .card-page.page-open .card-content .card-img .card-img-top {
+  width: 100%;
+}
+
+#hotArea .open-group .card-page.page-open .card-content .location {
+  width: 14px;
+}
+
+#hotArea .open-group .card-page.page-open .card-content .clock_icon {
+  width: 14px;
 }
 
 .footer {
