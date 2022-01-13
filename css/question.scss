@@ -133,15 +133,27 @@ nav.navbar.navbar-expand-lg.navbar-dark {
         margin: 0 auto;
         width: 600px;
         .question {
-            h4 {
+            .q { 
+                border-bottom: 1px solid $color_green; 
                 cursor: pointer;
-                margin: 0;
-                padding: 20px 5px;
-                border-bottom: 1px solid $color_green;
-                background: $color_white;
-            }
-            h4.active {
-                font-weight: 600;
+                h4 {
+                    margin: 0;
+                    padding: 20px 5px;   
+                }
+                h4.active {
+                    font-weight: 600;
+                }
+                span {
+                    width: 10px;
+                    display: inline-block;
+                    img {
+                        width: 100%;
+                        transition: .5s;
+                    }
+                    img.active {
+                        transform: rotate(90deg);
+                    }
+                }
             }
             p {
                 display: none;
