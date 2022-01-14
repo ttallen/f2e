@@ -35,12 +35,21 @@ p {
   height: 100%;
 }
 
-nav a {
-  margin: 0 10px;
+nav .navbar-brand .logo {
+  display: inline-block;
+  width: 50px;
+}
+
+nav .navbar-brand .logo img {
+  width: 100%;
 }
 
 nav .navbar-collapse .navbar-nav {
   text-align: center;
+}
+
+nav .navbar-collapse .navbar-nav a {
+  margin: 0 10px;
 }
 
 nav.navbar.navbar-expand-lg.navbar-dark {
@@ -88,8 +97,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/photo01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/photo01.jpg);
   background-size: cover;
   background-position: center;
   min-height: 200px;
@@ -120,10 +129,6 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #content .question-list .question .q h4 {
   margin: 0;
   padding: 20px 5px;
-}
-
-#content .question-list .question .q h4.active {
-  font-weight: 600;
 }
 
 #content .question-list .question .q span {

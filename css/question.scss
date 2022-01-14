@@ -68,12 +68,21 @@ p {
     height: 100%;
 }
 nav {
-    a {
-        margin: 0 10px
+    .navbar-brand {
+        .logo {
+            display: inline-block;
+            width: 50px;
+            img {
+                width: 100%;
+            }
+        }
     }
     .navbar-collapse {
         .navbar-nav {
             text-align: center;
+            a {
+                margin: 0 10px
+            }
         }
     }
 }
@@ -115,7 +124,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 }
 
 #header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15)),url(https://images.unsplash.com/photo-1583395145517-1e3177037600?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15)),url(../images/photo01.jpg);
     background-size: cover;
     background-position: center;
     min-height: 200px;
@@ -139,9 +148,6 @@ nav.navbar.navbar-expand-lg.navbar-dark {
                 h4 {
                     margin: 0;
                     padding: 20px 5px;   
-                }
-                h4.active {
-                    font-weight: 600;
                 }
                 span {
                     width: 10px;

@@ -20,7 +20,7 @@ var swiper = new Swiper(".mySwiper", {
     // },
     breakpoints: {
         // when window width is >= 320px
-        320: {
+        1: {
             slidesPerView: 1,
             spaceBetween: 20
         },

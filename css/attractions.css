@@ -35,12 +35,21 @@ img {
   z-index: 21;
 }
 
-nav a {
-  margin: 0 10px;
+nav .navbar-brand .logo {
+  display: inline-block;
+  width: 50px;
+}
+
+nav .navbar-brand .logo img {
+  width: 100%;
 }
 
 nav .navbar-collapse .navbar-nav {
   text-align: center;
+}
+
+nav .navbar-collapse .navbar-nav a {
+  margin: 0 10px;
 }
 
 nav.navbar.navbar-expand-lg.navbar-dark {
@@ -92,6 +101,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/unsplash01.jpg);
   background-size: cover;
   background-position: center;
+  min-height: 460px;
   height: 60vh;
   border-radius: 0;
   margin-bottom: 0;
