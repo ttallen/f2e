@@ -96,23 +96,34 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   }
 }
 
-#header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/photo01.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/photo01.jpg);
+#header .jumbotron {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/unsplash02.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/unsplash02.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 200px;
+  min-height: 460px;
+  height: 50vh;
+  margin-bottom: 0;
+}
+
+#header .jumbotron p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@media (max-width: 375px) {
+  #header .jumbotron p {
+    font-size: 21px;
+  }
 }
 
 #content {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 #content .title {
   border-bottom: 2px solid #000;
-}
-
-#content .title h3 {
   text-align: center;
 }
 
