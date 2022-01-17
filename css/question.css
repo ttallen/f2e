@@ -1,16 +1,11 @@
 html, body {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 body {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 h4 {
@@ -27,10 +22,76 @@ p {
   font-size: 16px;
 }
 
+@-webkit-keyframes load {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes load {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+  opacity: 0.95;
+  background: #ffffff;
+}
+.loading .pic {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+.loading .pic i {
+  display: block;
+  float: left;
+  width: 6px;
+  height: 50px;
+  background: #23bed6;
+  margin: 0 2px;
+  transform: scaleY(0.4);
+  -webkit-animation: load 1.2s infinite;
+          animation: load 1.2s infinite;
+}
+.loading .pic i:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.loading .pic i:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.loading .pic i:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.loading .pic i:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.loading .pic i:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
 .flex-grow {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   width: 100%;
   height: 100%;
 }
@@ -39,15 +100,12 @@ nav .navbar-brand .logo {
   display: inline-block;
   width: 50px;
 }
-
 nav .navbar-brand .logo img {
   width: 100%;
 }
-
 nav .navbar-collapse .navbar-nav {
   text-align: center;
 }
-
 nav .navbar-collapse .navbar-nav a {
   margin: 0 10px;
 }
@@ -61,31 +119,26 @@ nav.navbar.navbar-expand-lg.navbar-dark {
   left: 0;
   right: 0;
   min-width: 100%;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 @media (min-width: 991px) {
   nav.navbar.navbar-expand-lg.navbar-dark.nav_top {
     background-color: transparent;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
   }
 }
-
 nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
-  color: #fff;
+  color: #ffffff;
 }
-
 @media (min-width: 991px) {
   nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
     text-shadow: 1px 1px #8b8b8b;
   }
 }
-
 nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link:hover {
   color: #bbb;
 }
-
 nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   color: #23bed6;
 }
@@ -97,21 +150,19 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #header .jumbotron {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/unsplash02.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/unsplash02.jpg);
   background-size: cover;
   background-position: center;
   min-height: 460px;
   height: 50vh;
   margin-bottom: 0;
+  border-radius: 0;
 }
-
 #header .jumbotron p {
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   font-size: 24px;
 }
-
 @media (max-width: 375px) {
   #header .jumbotron p {
     font-size: 21px;
@@ -121,53 +172,41 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #content {
   padding: 100px 0;
 }
-
 #content .title {
   border-bottom: 2px solid #000;
   text-align: center;
 }
-
 #content .question-list {
   margin: 0 auto;
   width: 600px;
 }
-
 #content .question-list .question .q {
   border-bottom: 1px solid #23bed6;
   cursor: pointer;
 }
-
 #content .question-list .question .q h4 {
   margin: 0;
   padding: 20px 5px;
 }
-
 #content .question-list .question .q span {
   width: 10px;
   display: inline-block;
 }
-
 #content .question-list .question .q span img {
   width: 100%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  transition: 0.5s;
 }
-
 #content .question-list .question .q span img.active {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 #content .question-list .question p {
   display: none;
   padding: 10px;
 }
-
 #content .question-list .question .active {
   display: block;
 }
 
 .footer {
   background: #23bed6;
-}
-/*# sourceMappingURL=question.css.map */
+}/*# sourceMappingURL=question.css.map */
