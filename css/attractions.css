@@ -37,19 +37,23 @@ img {
 
 @-webkit-keyframes load {
   0%, 40%, 100% {
-    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
   }
   20% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
 @keyframes load {
   0%, 40%, 100% {
-    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
   }
   20% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 .loading {
@@ -68,7 +72,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: 0 auto;
 }
 .loading .pic i {
@@ -78,7 +83,8 @@ img {
   height: 50px;
   background: #23bed6;
   margin: 0 2px;
-  transform: scaleY(0.4);
+  -webkit-transform: scaleY(0.4);
+          transform: scaleY(0.4);
   -webkit-animation: load 1.2s infinite;
           animation: load 1.2s infinite;
 }
@@ -126,6 +132,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
   left: 0;
   right: 0;
   min-width: 100%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -157,6 +164,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #intro .jumbotron {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/unsplash01.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/unsplash01.jpg);
   background-size: cover;
   background-position: center;
@@ -213,6 +221,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #intro .jumbotron .send {
   cursor: pointer;
   opacity: 0.8;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 #intro .jumbotron .send:hover {
@@ -335,6 +344,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   width: 20px;
   height: 20px;
   opacity: 0.4;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 #card_group .card-page.page-open .close-card:hover {
@@ -363,4 +373,4 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 .footer {
   background: #23bed6;
-}/*# sourceMappingURL=attractions.css.map */
+}

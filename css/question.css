@@ -4,8 +4,13 @@ html, body {
 
 body {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h4 {
@@ -24,19 +29,23 @@ p {
 
 @-webkit-keyframes load {
   0%, 40%, 100% {
-    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
   }
   20% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
 @keyframes load {
   0%, 40%, 100% {
-    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
   }
   20% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 .loading {
@@ -55,7 +64,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: 0 auto;
 }
 .loading .pic i {
@@ -65,7 +75,8 @@ p {
   height: 50px;
   background: #23bed6;
   margin: 0 2px;
-  transform: scaleY(0.4);
+  -webkit-transform: scaleY(0.4);
+          transform: scaleY(0.4);
   -webkit-animation: load 1.2s infinite;
           animation: load 1.2s infinite;
 }
@@ -91,7 +102,9 @@ p {
 }
 
 .flex-grow {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 100%;
   height: 100%;
 }
@@ -119,6 +132,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
   left: 0;
   right: 0;
   min-width: 100%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -150,6 +164,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #header .jumbotron {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/unsplash02.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/unsplash02.jpg);
   background-size: cover;
   background-position: center;
@@ -194,10 +209,12 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 #content .question-list .question .q span img {
   width: 100%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 #content .question-list .question .q span img.active {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 #content .question-list .question p {
   display: none;
@@ -209,4 +226,4 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 .footer {
   background: #23bed6;
-}/*# sourceMappingURL=question.css.map */
+}

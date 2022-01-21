@@ -48,19 +48,23 @@ img {
 
 @-webkit-keyframes load {
   0%, 40%, 100% {
-    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
   }
   20% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
 @keyframes load {
   0%, 40%, 100% {
-    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
   }
   20% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 .loading {
@@ -79,7 +83,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: 0 auto;
 }
 .loading .pic i {
@@ -89,7 +94,8 @@ img {
   height: 50px;
   background: #23bed6;
   margin: 0 2px;
-  transform: scaleY(0.4);
+  -webkit-transform: scaleY(0.4);
+          transform: scaleY(0.4);
   -webkit-animation: load 1.2s infinite;
           animation: load 1.2s infinite;
 }
@@ -137,6 +143,7 @@ nav.navbar.navbar-expand-lg.navbar-dark {
   left: 0;
   right: 0;
   min-width: 100%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -168,6 +175,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #intro .jumbotron {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/photo01.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/photo01.jpg);
   background-size: cover;
   background-position: center;
@@ -258,12 +266,15 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   margin-top: 3px;
 }
 #photo .boxImage {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/photo02.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/photo02.jpg);
 }
 #photo .boxImage2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/photo03.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/photo03.jpg);
 }
 #photo .boxImage3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/photo04.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/photo04.jpg);
 }
 #photo .boxBg {
@@ -318,9 +329,15 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 #hotArea .container .swiper .swiper-slide {
   font-size: 18px;
   /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #hotArea .container .swiper .swiper-slide .card .card-head {
   width: 100%;
@@ -433,6 +450,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   width: 20px;
   height: 20px;
   opacity: 0.4;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 #hotArea .open-group .card-page.page-open .close-card:hover {
@@ -461,4 +479,4 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 
 .footer {
   background: #23bed6;
-}/*# sourceMappingURL=style.css.map */
+}
