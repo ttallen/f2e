@@ -22,12 +22,12 @@ img {
 
 .btn {
   background: #23bed6;
-  color: #fff;
+  color: #ffffff;
   padding: 9px 26px;
   border-radius: 20px;
 }
 .btn:hover {
-  background: #fff;
+  background: #ffffff;
   color: #23bed6;
 }
 
@@ -75,7 +75,7 @@ img {
   left: 0;
   z-index: 25;
   opacity: 0.95;
-  background: #fff;
+  background: #ffffff;
 }
 .loading .pic {
   width: 64px;
@@ -150,11 +150,11 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 @media (min-width: 991px) {
   nav.navbar.navbar-expand-lg.navbar-dark.nav_top {
     background-color: transparent;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
   }
 }
 nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
-  color: #fff;
+  color: #ffffff;
 }
 @media (min-width: 991px) {
   nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link {
@@ -185,7 +185,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   border-radius: 0;
 }
 #intro .jumbotron .text-box {
-  color: #fff;
+  color: #ffffff;
 }
 #intro .jumbotron h1 {
   font-size: 52px;
@@ -383,13 +383,13 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 #hotArea .container .swiper .swiper-slide .card .btn {
   background: #23bed6;
-  color: #fff;
+  color: #ffffff;
   padding: 9px 26px;
   border: 1px solid #23bed6;
   border-radius: 5px;
 }
 #hotArea .container .swiper .swiper-slide .card .btn:hover {
-  background: #fff;
+  background: #ffffff;
   color: #23bed6;
 }
 #hotArea .container .swiper .swiper-pagination {

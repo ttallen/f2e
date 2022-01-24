@@ -1,0 +1,41 @@
+@mixin pc {
+    @media(min-width: 991px) {
+        @content
+    }
+}
+
+@mixin tablet991 {
+    @media(max-width: 991px) {
+        @content
+    }
+}
+
+@mixin tablet768 {
+    @media(max-width: 768px) {
+        @content
+    }
+}
+
+@mixin tablet640 {
+    @media(max-width: 640px) {
+        @content
+    }
+}
+
+@mixin mobile576 {
+    @media(max-width: 576px) {
+        @content
+    }
+}
+
+@mixin mobile475 {
+    @media(max-width: 475px) {
+        @content
+    }
+}
+
+@mixin mobile375 {
+    @media(max-width: 375px) {
+        @content
+    }
+}
