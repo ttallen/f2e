@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "helpers/variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// 主要區塊
+@import "components/mixin";
+@import "components/utilities";
+@import "components/header";
+@import "components/footer";
+@import "components/index";
+@import "components/attraction";
+@import "components/question";
+

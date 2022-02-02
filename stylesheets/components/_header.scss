@@ -1,0 +1,55 @@
+nav {
+    .navbar-brand {
+        .logo {
+            display: inline-block;
+            width: 50px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            text-align: center;
+            a {
+                margin: 0 10px
+            }
+        }
+    }
+}
+nav.navbar.navbar-expand-lg.navbar-dark {
+    background: #000;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 24;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    transition: 0.5s;
+}
+nav.navbar.navbar-expand-lg.navbar-dark.nav_top {
+    @include pc {
+        background-color: transparent;
+        border-bottom: 1px solid $color_white;
+    }
+    .nav-link {
+        color: $color_white;
+        @include pc {
+            text-shadow: 1px 1px rgb(139, 139, 139);
+        }
+        &:hover {
+            color: #bbb;
+        }
+    }
+    .nav-link.active {
+        color: $color_green;
+    }
+}
+nav.navbar.navbar-expand-lg.navbar-dark {
+    .nav-link {
+        @include tablet991 {
+            margin: 15px 0;
+        }
+    }
+}

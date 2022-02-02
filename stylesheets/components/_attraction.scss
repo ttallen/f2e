@@ -1,0 +1,171 @@
+#filter {
+    .jumbotron {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15)),url(../images/unsplash01.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 460px;
+        height: 60vh;
+        border-radius: 0;
+        margin-bottom: 0;
+        @include mobile576 {
+            height: 70vh;
+        }
+        .text-box {
+            color: $color_white;
+        }
+        h1 {
+            color: $color_white;
+            font-size: 52px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.5;
+            letter-spacing: 6px;
+            margin: 15px 0;
+            @include tablet768 {
+                font-size: 48px;
+            }
+            @include tablet640 {
+                font-size: 43px;
+            }
+            @include mobile576 {
+                font-size: 36px;
+            }
+            @include mobile375 {
+                font-size: 30px;
+            }
+        }
+        .categorySelect,.citySelect {
+            cursor: pointer;
+            @include tablet640 {
+                width: 38%;
+            }
+        }
+        .send {
+            cursor: pointer;
+            opacity: 0.8;
+            transition: .5s;
+            &:hover {
+                opacity: 1;
+            }
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
+#card-group {
+    .card {
+        .card-head {
+            width: 100%;
+            overflow: hidden;
+            .card-img-top {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                @include tablet991 {
+                    height: 250px;
+                }
+                @include tablet768 {
+                    height: 190px;
+                }
+                @include tablet640 {
+                    height: 180px;
+                }
+                @include mobile576 {
+                    height: 260px;
+                }
+                @include mobile475 {
+                    height: 250px;
+                }
+                @include mobile375 {
+                    height: 200px;
+                }
+            }
+        }
+        .btn {
+            background: $color_green;
+            color: $color_white;
+            padding: 9px 26px;
+            border: 1px solid $color_green;
+            border-radius: 5px;
+            &:hover {
+                background: $color_white;
+                color: $color_green;
+            }
+        }
+    }
+    .search {
+        font-size: 32px;
+        @include mobile576 {
+            font-size: 28px;
+        }
+        @include mobile375 {
+            font-size: 26px;
+        }
+    }
+    .card-page {
+        display: none;
+        .card {
+            border: none;
+        }
+    }
+    .card-page.page-open {
+        display: block;
+        position: absolute;
+        width: 100%;
+        >div {
+            position: relative;
+            margin: 0 auto;
+            width: 40%;
+            background: #fff;
+            padding: 1.5%;
+            z-index: 23;
+            @include tablet991() {
+                width: 60%;
+            }
+            @include tablet768 {
+                width: 60%;
+            }
+            @include tablet640 {
+                width: 70%;
+            }
+            @include mobile576 {
+                width: 90%;
+            }
+        }
+        .close-card {
+            cursor: pointer;
+            position: absolute;
+            top: 0.5%;
+            right: 1.5%;
+            width: 20px;
+            height: 20px;
+            opacity: 0.4;
+            transition: .5s;
+            &:hover {
+                opacity: 1;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .card-content {
+            .card-img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                .card-img-top {
+                    width: 100%;
+                }
+            }
+            .location {
+                width: 14px;
+            }
+            .clock_icon {
+                width: 14px;
+            }
+        }
+    }
+}
