@@ -21,7 +21,7 @@ function getTourList() {
         let str = '';
         thisData.forEach(function(item) {
             str += `
-            <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
+            <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3" data-aos="fade-up" data-aos-duration="1500">
                 <div class="card shadow">
                     <div class="card-head">
                         <img src="${item.Picture.PictureUrl1 == undefined ? 'images/no_img.jpg' : item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1 == undefined ? '預設圖片' : item.Picture.PictureDescription1}">
@@ -90,7 +90,7 @@ send.addEventListener("click",function(e) {
         let str = '';
         thisData.forEach(function(item) {
             str += `
-            <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3">
+            <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-3" data-aos="fade-up" data-aos-duration="1500">
                 <div class="card shadow">
                     <div class="card-head">
                         <img src="${item.Picture.PictureUrl1 == undefined ? 'images/no_img.jpg' : item.Picture.PictureUrl1}" class="card-img-top" alt="${item.Picture.PictureDescription1 == undefined ? '預設圖片' : item.Picture.PictureDescription1}">
