@@ -12,9 +12,10 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="stylesheets/all.css?123">
 </head>
 <body>
+    <div id="goTop"><img src="images/up.svg"></div>
     <div class="loading">
         <div class="pic">
             <i></i>
@@ -96,7 +97,32 @@
     </section>
     <section class="flex-grow"></section>
     <section class="footer text-center py-3">
-        <div class="text-white">Copyright © Allen All rights reserved.</div>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column justify-content-between">
+                    <h3>Taiwan Go 旅遊臺灣</h3>
+                    <ul class="list-unstyled d-flex flex-column align-items-start">
+                        <li>02-288xxxxx</li>
+                        <li>xxxxx@gmail.com</li>
+                        <li>資料來源：運輸資料流通服務平臺 (TDX)</li>
+                    </ul>
+                </div>
+                <h4 class="writing-md-vertical footer-slogan d-none d-md-block mr-0 ml-auto">
+                    一起來一趟——<br><span class="mt-5">難忘的旅程吧</span>
+                </h4>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-start justify-content-between pb-2 pt-3">
+                <div class="footer-media mb-md-0 mb-2">
+                    <a href="https://zh-tw.facebook.com/" target="_blank">
+                        <img src="images/facebook.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="ml-1">
+                        <img src="images/instagram.png" alt="">
+                    </a>
+                </div>
+                <p class="m-0">Copyright © Allen All rights reserved.</p>
+            </div>
+        </div>
     </section>
     
     <!-- Optional JavaScript -->
@@ -106,6 +132,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/header.js"></script>
     <script src="js/question.js"></script>
+    <script src="js/goTop.js"></script>
     <script src="js/loading.js"></script>
 </body>
 </html>

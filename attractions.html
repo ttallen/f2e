@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">    
     <!-- Aos CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="stylesheets/all.css?123">
 </head>
 <body>
+    <div id="goTop"><img src="images/up.svg"></div>
     <div class="bg-black"></div>
     <div class="loading">
         <div class="pic">
@@ -104,7 +105,32 @@
         </div>
     </section>
     <section class="footer text-center py-3">
-        <div class="text-white">Copyright © Allen All rights reserved.</div>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column justify-content-between">
+                    <h3>Taiwan Go 旅遊臺灣</h3>
+                    <ul class="list-unstyled d-flex flex-column align-items-start">
+                        <li>02-288xxxxx</li>
+                        <li>xxxxx@gmail.com</li>
+                        <li>資料來源：運輸資料流通服務平臺 (TDX)</li>
+                    </ul>
+                </div>
+                <h4 class="writing-md-vertical footer-slogan d-none d-md-block mr-0 ml-auto">
+                    一起來一趟——<br><span class="mt-5">難忘的旅程吧</span>
+                </h4>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-start justify-content-between pb-2 pt-3">
+                <div class="footer-media mb-md-0 mb-2">
+                    <a href="https://zh-tw.facebook.com/" target="_blank">
+                        <img src="images/facebook.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="ml-1">
+                        <img src="images/instagram.png" alt="">
+                    </a>
+                </div>
+                <p class="m-0">Copyright © Allen All rights reserved.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Optional JavaScript -->
@@ -123,6 +149,7 @@
     <script src="js/getData.js"></script>
     <script src="js/header.js"></script>
     <script src="js/card.js"></script>
+    <script src="js/goTop.js"></script>
     <script src="js/loading.js"></script>
 </body>
 </html>

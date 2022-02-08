@@ -26,6 +26,25 @@ p.lead {
 img {
     max-width: 100%;
 }
+#goTop {
+    display: none;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: $color_green;
+    border: 1px solid $color_white;
+    opacity: 1 !important;
+    color: $color_white;
+    cursor: pointer;
+    z-index: 21;
+    &:hover {
+        opacity: 0.7 !important;
+    }
+    img {
+        width: 25px;
+        margin: 10px 10px;
+    }
+}
 .bg-black {
     display: none;
 }

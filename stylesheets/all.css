@@ -10907,6 +10907,28 @@ img {
   max-width: 100%;
 }
 
+#goTop {
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background: #23bed6;
+  border: 1px solid #ffffff;
+  opacity: 1 !important;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 21;
+}
+
+#goTop:hover {
+  opacity: 0.7 !important;
+}
+
+#goTop img {
+  width: 25px;
+  margin: 10px 10px;
+}
+
 .bg-black {
   display: none;
 }
@@ -11077,6 +11099,63 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   background: #23bed6;
 }
 
+.footer h3, .footer h4, .footer p, .footer li, .footer a {
+  color: #ffffff;
+}
+
+.footer h3 {
+  font-size: 31px;
+}
+
+@media (max-width: 375px) {
+  .footer h3 {
+    font-size: 28px;
+  }
+}
+
+.footer li {
+  font-size: 16px;
+}
+
+@media (max-width: 375px) {
+  .footer li {
+    font-size: 14px;
+  }
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+@media (max-width: 375px) {
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+.footer .footer-slogan {
+  font-weight: 700;
+  letter-spacing: 10px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.footer .footer-media a {
+  display: inline-block;
+  width: 30px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.footer .footer-media a:hover {
+  opacity: 0.7;
+}
+
+.footer .footer-media a img {
+  width: 100%;
+}
+
 #index-fv .jumbotron {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url(../images/photo01.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../images/photo01.jpg);
@@ -11086,6 +11165,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
   height: 70vh;
   margin-bottom: 0;
   border-radius: 0;
+  padding: 2.5rem 1rem 2rem 1rem;
 }
 
 #index-fv .jumbotron .text-box {
@@ -11732,7 +11812,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.nav_top .nav-link.active {
 }
 
 #question-group {
-  padding: 100px 0;
+  padding: 100px 0 148px 0;
 }
 
 #question-group .title {
